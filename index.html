@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyIMDB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon73312.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap' rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-container">
+                <div class="logo-container">
+                    <h1 class="logo">My<span class="S-logo">IMDB</span></h1>
+                </div>
+                <div class="menu-container">
+                    <div class="menu-list">
+                        <a href="#" class="menu-list-item">
+                            <i class='bx bxs-home'></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="#about" class="menu-list-item">
+                            <i class='bx bx-question-mark'></i>
+                            <span>About</span>
+                        </a>
+                        <a href="#contact" class="menu-list-item">
+                            <i class='bx bxs-contact' ></i>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input type="search" placeholder="Search" class="search-input">
+                        <button id="searchBtn"><span><i class='bx bx-search'></i></span></button>
+                    </div>
+                </div>
+                <div class="profile-container">
+                    <img src="images/Screenshot_20240310-213617.png" alt="" class="profile-picture">
+                    <div class="profile-text-container">
+                        <span class="profile-text">Profile</span>
+                        <i class='bx bxs-down-arrow'></i>
+                    </div>
+                    <div class="toggle">
+                        <i class='bx bxs-moon toggle-icon'></i>
+                        <i class='bx bx-brightness-half toggle-icon'></i>
+                        <div class="toggle-ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="sidebar">
+        <a href="#movies" class="side-content">
+            <i class='left-menu-icon bx bxs-movie'></i>
+            <span class="side-text">Movies</span>
+        </a>
+        <a href="#series" class="side-content">
+            <i class='left-menu-icon bx bx-tv'></i>
+            <span class="side-text">Series</span>
+        </a>
+        <a href="#favorites" class="side-content" id="favorites-link">
+            <i class='left-menu-icon bx bx-bookmark-heart'></i>
+            <span class="side-text">Favorites</span>
+        </a>
+        <a href="#trending" class="side-content" id="trending-link">
+            <i class='left-menu-icon bx bxs-hot'></i>
+            <span class="side-text">Trending</span>
+        </a>
+    </div>
+  </header>
+
+  <div class="container">
+        <div class="featured-content"
+            style="background-image: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url(images/dune-part-2-poster.jpg);">
+        <div class="content-container">
+
+            <img class="featured-title" src="images/dune__part_two_logo_by_crillyboy25_dfvn4us-fullview.png" alt="">
+            <p class="featured-desc">Paul Atreides unites with Chani and the Fremen while seeking revenge against the <br>conspirators of Emperor Shaddam IV who destroyed his family. Along the way, <br>he's fulfilling the prophecy and slowly becoming Kwisatz Haderach</p>
+            <button class="featured-button">Watch</button>
+            </div>
+        </div>
+        <div class="movies-container favorites" id="faves">
+            <h2 class="categorical" id="favorites">Favorites</h2>
+            <div class="movies-grid">
+                
+                <!-- <div class="card" data-id="movie8">
+                    <div class="img">
+                        <img src="images/pulp-fiction-cover-i1288.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Pulp Fiction</h3>
+                        <div class="single-info">
+                            <span>Rating: </span>
+                            <span>8.9 / 10</span>
+                        </div>
+                        <div class="single-info">
+                            <span>Release Date: </span>
+                            <span>14-10-1994</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="movies-container trending" id="trendy">
+            <h2 class="categorical" id="trending">Trending</h2>
+            <div class="movies-grid">
+                
+                <!-- <div class="card" data-id="movie8">
+                    <div class="img">
+                        <img src="images/pulp-fiction-cover-i1288.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>Pulp Fiction</h3>
+                        <div class="single-info">
+                            <span>Rating: </span>
+                            <span>8.9 / 10</span>
+                        </div>
+                        <div class="single-info">
+                            <span>Release Date: </span>
+                            <span>14-10-1994</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+
+  </div>
+
+
+
+
+  <div class="popup-container">
+    <!-- <span class="x-icon">&#10006;</span>
+    <div class="content">
+        <div class="left">
+            <div class="poster-img">
+                <img src="images/images (3).jpg" alt="">
+            </div>
+            <div class="single-info">
+                <span>Add to Favorites:</span>
+                <span class="heart-icon">&#9829;</span>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Movie Title</h2>
+            <h4>Movie Tagline</h4>
+            <div class="single-info-container">
+                <div class="single-info">
+                    <span>Language:</span>
+                    <span>English</span>
+                </div>
+                <div class="single-info">
+                    <span>Length:</span>
+                    <span>120 minutes</span>
+                </div>
+                <div class="single-info">
+                    <span>Rating:</span>
+                    <span>10 / 10</span>
+                </div>
+                <div class="single-info">
+                    <span>Budget:</span>
+                    <span>1300000</span>
+                </div>
+                <div class="single-info">
+                    <span>Release Date:</span>
+                    <span>05-10-2023</span>
+                </div>
+            </div>
+            <div class="genres">
+                <h3>Genres</h3>
+                <ul>
+                    <li>Action</li>
+                    <li>Drama</li>
+                    <li>Romance</li>
+                </ul>
+            </div>
+            <div class="overview">
+                <h3>overview</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi maxime optio similique exercitationem quis voluptatem sit et expedita porro ut. Totam magni maiores adipisci facere repudiandae blanditiis provident veritatis neque?</p>
+            </div>
+            <div class="trailer">
+                <h3>trailer</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Kmo8NLKkfcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div> -->
+  </div>
+
+  <footer class="footer-section">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 id="about">About</h3>
+        <p>This website is dedicated to providing the latest releases, informations, raves and reviews about movies. Welcome to your new fave spot!</p>
+      </div>
+      <div class="footer-section">
+        <h3 id="contact">Contact:</h3>
+        <div class="contact-info">
+          <p>Email:</p>
+          <span><a href="https://mail.google.com/mail/u/0/">contactMyIMDB@gmail.com</a></span><br>
+          <p>Phone:</p>
+          <span><a href="#">254-100-200-300</a></span><br>
+          <p><a href="https://www.instagram.com/">Instagram</a></p>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-section">
+            <h3>© 2024 EnableGeek | All Rights Reserved</h3>
+      </div>
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

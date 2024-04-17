@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+    <div class="card" data-id="movie1">
+        <div class="img">
+            <img src="images/a72a8319c98214ed6154a954aba1f220.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Road House</h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>7.6 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>21-03-2024</span>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-id="movie2">
+        <div class="img">
+            <img src="images/de430f26b0b8434bbe64c8c96f3c94c2.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>The Godfather</h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>9.2 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>24-03-1972</span>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-id="movie3">
+        <div class="img">
+            <img src="images/unnamed.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Get Out </h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>7.8 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>24-02-2017</span>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-id="movie 4">
+        <div class="img">
+            <img src="images/images (3).jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>The Covenant</h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>7.5 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>21-04-2023</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="movies-container trending">
+<h2 class="categorical">Trending</h2>
+<div class="movies-grid">
+    <div class="card" data-id="movie5">
+        <div class="img">
+            <img src="images/images.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Oppenheimer</h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>8.3 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>21-07-2023</span>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-id="movie6">
+        <div class="img">
+            <img src="images/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Inception</h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>8.8 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>16-07-2010</span>
+            </div>
+        </div>
+    </div>
+    <div class="card" data-id="movie7">
+        <div class="img">
+            <img src="images/John-Wick-Posters-Rule.webp" alt="">
+        </div>
+        <div class="info">
+            <h3>John Wick</h3>
+            <div class="single-info">
+                <span>Rating: </span>
+                <span>7.4 / 10</span>
+            </div>
+            <div class="single-info">
+                <span>Release Date: </span>
+                <span>24-10-2014</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+trending_el.innerHTML = data.slice(0, 4).map(e => {
+    return `
+        <div class="card" data-id="${e.id}">
+            <div class="img">
+                <img src="${image_path + e.poster_path}">
+            </div>
+            <div class="info">
+                <h2>${e.title}</h2>
+                <div class="single-info">
+                    <span>Rate: </span>
+                    <span>${e.vote_average} / 10</span>
+                </div>
+                <div class="single-info">
+                    <span>Release Date: </span>
+                    <span>${e.release_date}</span>
+                </div>
+            </div>
+        </div>
+    `
+}).join('')
+
+
+
+
+function App() {
+
+    const [like, setLike] = useState(5)
+    const [dislike, setDislike] = useState(3)
+  
+    const handleIncrements = () => {
+      setLike(like + 1)
+    }
+  
+    const handleDecrement = () => {
+      setDislike(dislike - 1)
+  
+    }
+  
+  
+  
+    return (
+        <div>
+          <div>
+          <h1 className='mainText'>Likes vs Dislikes</h1>
+          </div>
+          <div>
+            <h2>Like Count:</h2>
+            <button onClick={handleIncrements}>Increase</button>
+            <button onClick={handleDecrement}>Decrease</button>
+          </div>
+          <div>
+            <h2>Disike Count:</h2>
+            <button onClick={handleIncrements}>Increase</button>
+            <button onClick={handleDecrement}>Decrease</button>
+          </div>
+       
+        </div>
+    )
+  }
+  
+  export default App
+  
