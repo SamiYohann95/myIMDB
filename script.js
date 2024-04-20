@@ -257,6 +257,7 @@ async function add_to_dom_trending () {
             </div>
         </div>
     `
+    
 }).join('')
 
 document.getElementById("favorites-link").addEventListener("click", () => {
